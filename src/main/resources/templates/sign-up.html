@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Expense Tracker</title>
+</head>
+<body>
+<form role="form" th:action="@{/sign-up}" th:method="post" th:object="${user}">
+    <label>Name</label>
+    <input type="text" id="firstname" name="firstname" th:field="*{firstname}">
+
+    <label>Surname</label>
+    <input type="text" id="surname" name="surname" th:field="*{surname}">
+
+    <label>Email</label>
+    <input type="text" id="email" name="email" th:field="*{email}">
+
+    <label>Password</label>
+    <input type="password" id="password" name="password" th:field="*{password}">
+
+    <input type="submit">
+</form>
+</body>
+</html>
